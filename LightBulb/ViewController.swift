@@ -16,15 +16,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        lightBulb.backgroundColor = UIColor.blue
+        lightBulb.backgroundColor = UIColor.red
         
     }
     
     
     @IBAction func colorSelected(_ sender: UISegmentedControl) {
         
-        print(sender.selectedSegmentIndex)
+        // print(sender.selectedSegmentIndex)
+        switch sender.selectedSegmentIndex {
+        case 1:
+            lightBulb.backgroundColor = UIColor.yellow
+        case 2:
+            lightBulb.backgroundColor = UIColor.green
+        case 3:
+            lightBulb.backgroundColor = UIColor.blue
+        default:
+            lightBulb.backgroundColor = UIColor.red
+        }
         
     }
     
